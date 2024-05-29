@@ -20,9 +20,9 @@ import os
 from os.path import join, dirname
 from dotenv import load_dotenv
 
-dotenv_path = join(dirname(__file__), '.env')
+dotenv_path = join(dirname(__file__), '../.env')
 load_dotenv(dotenv_path)
-MONGO_DETAILS = os.environ.get("MONGO_URI","mongodb+srv://21it3031:ivtSUH8HSfjDBMjD@cluster0.4kkffrs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+MONGO_DETAILS = os.environ.get("MONGO_URI")
 
 client = motor.motor_asyncio.AsyncIOMotorClient(
     MONGO_DETAILS,
