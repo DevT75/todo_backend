@@ -22,7 +22,7 @@ from dotenv import load_dotenv
 
 dotenv_path = join(dirname(__file__), '../.env')
 load_dotenv(dotenv_path)
-MONGO_DETAILS = os.environ.get("MONGO_URI")
+MONGO_DETAILS = os.environ.get("MONGODB_URI")
 
 client = motor.motor_asyncio.AsyncIOMotorClient(
     MONGO_DETAILS,
